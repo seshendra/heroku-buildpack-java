@@ -77,7 +77,7 @@ fi
 # change to build dir to run maven
 cd $BUILD_DIR
 
-export MAVEN_OPTS="-Xmx1024m"
+export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=256m"
 
 # build app
 if [ ! -f ${BUILD_DIR}/incremental-build ]; then
